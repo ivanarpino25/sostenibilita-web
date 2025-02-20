@@ -1,32 +1,131 @@
+/* Impostazioni base per body e html */
+html, body {
+    height: 100%; /* Imposta l'altezza dell'intera pagina */
+    margin: 0;    /* Rimuove i margini predefiniti */
+}
+
+/* Stili per il body */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
-    color: #333;
+    display: flex;             /* Utilizza Flexbox per il layout */
+    flex-direction: column;    /* Organizza i contenuti in una colonna */
+    font-family: Arial, sans-serif;  /* Imposta il font */
+    background-color: #f8f9fa;  /* Colore di sfondo chiaro */
+    color: #333;                /* Colore del testo */
 }
 
+/* Navbar */
 .navbar {
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: absolute;       /* Posiziona la navbar in alto */
+    top: 0;                    /* Allinea la navbar alla parte superiore della pagina */
+    left: 0;                   /* Allinea la navbar a sinistra */
+    width: 100%;               /* Fa sì che la navbar occupi tutta la larghezza */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombra per la navbar */
+    background-color: #f8f9fa;  /* Colore di sfondo della navbar */
+    justify-content: center;    /* Allinea gli elementi al centro */
+    align-items: center;        /* Allinea gli elementi verticalmente al centro */
+    display: flex;              /* Usa Flexbox */
+    z-index: 1000;              /* Assicura che la navbar sia sopra altri elementi */
 }
 
+/* Logo e nome della navbar */
+.navbar-brand {
+    color: black;                     /* Colore del logo */
+    text-decoration: none;             /* Rimuove la sottolineatura */
+    font-weight: bold;                 /* Testo in grassetto */
+    display: flex;                     /* Allinea il logo orizzontalmente */
+    align-items: center;               /* Allinea verticalmente */
+    position: absolute;                /* Posiziona il logo a sinistra */
+    left: 20px;                        /* Distanza dalla sinistra */
+}
+
+/* Link della navbar */
 .navbar-nav {
-    display: flex;
-    flex-direction: row;
-    gap: 15px;
+    display: flex;                     /* Usa Flexbox per la navbar */
+    list-style: none !important;       /* Rimuove i pallini dai link */
+    flex-direction: row;               /* Allinea i link orizzontalmente */
+    gap: 15px;                         /* Distanza tra i link */
 }
 
+/* Stili per i link della navbar */
+.navbar-nav .nav-link {
+    font-weight: bold;                /* Testo in grassetto */
+    color: black;                     /* Colore del testo */
+    text-decoration: none;            /* Rimuove la sottolineatura */
+    transition: color 0.3s ease;      /* Effetto di transizione per il cambio di colore */
+}
+
+/* Hover sui link della navbar */
+.navbar-nav .nav-link:hover {
+    color: #007bff;                   /* Colore blu al passaggio del mouse */
+}
+
+/* Padding per ogni item nella navbar */
+.nav-item {
+    padding: 0 50px;  /* Distanza a destra e sinistra per ogni item */
+}
+
+/* Stili responsive per mobile */
+@media (max-width: 768px) {
+    .navbar-nav {
+        flex-direction: column;  /* Cambia l'orientamento dei link in verticale su schermi piccoli */
+        gap: 10px;               /* Distanza ridotta tra i link */
+    }
+    
+    .navbar-collapse {
+        width: 100%;  /* Assicura che il menu occupi tutta la larghezza su mobile */
+    }
+
+    .navbar-toggler {
+        border: none; /* Rimuove il bordo dal toggler (hamburger menu) */
+    }
+}
+
+/* Hero section */
 .hero {
-    background: url('../images/hero-bg.jpg') center/cover no-repeat;
-    padding: 100px 0;
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    padding: 100px 0;  /* Distanza interna (padding) verticale */
+    padding-left: 20px; /* Distanza di 20px a sinistra */
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);  /* Aggiunge ombra al testo per leggibilità */
 }
 
+/* Stili per il titolo */
 .container h2 {
-    color: #007bff;
-    margin-bottom: 20px;
+    color: #007bff;      /* Colore blu per il titolo */
+    margin-bottom: 20px;  /* Spazio sotto il titolo */
 }
 
+/* Footer */
 footer {
-    background-color: #343a40;
-    color: white;
-    padding: 15px 0;
+    margin-top: auto;            /* Posiziona il footer in fondo alla pagina */
+    background-color: #343a40;   /* Colore scuro per il footer */
+    color: white;                /* Colore bianco per il testo */
+    padding: 15px 0;              /* Spaziatura interna verticale */
+}
+
+/* Pulsante personalizzato */
+.modern-btn {
+    display: inline-block;       /* Rende il pulsante in-line */
+    padding: 15px 30px;          /* Distanza interna del pulsante */
+    font-size: 16px;             /* Dimensione del font */
+    font-weight: 600;            /* Grassetto per il testo */
+    text-align: center;          /* Allinea il testo al centro */
+    text-decoration: none;       /* Rimuove la sottolineatura */
+    border-radius: 30px;         /* Angoli arrotondati */
+    background-color: #007bff;   /* Colore di sfondo blu */
+    color: white;                /* Colore del testo bianco */
+    transition: all 0.3s ease;   /* Transizione morbida per l'hover */
+    box-shadow: 0 4px 6px rgba(0, 123, 255, 0.3); /* Ombra per effetto 3D */
+}
+
+/* Hover sul pulsante */
+.modern-btn:hover {
+    background-color: #0056b3;   /* Colore più scuro quando hover */
+    transform: translateY(-2px); /* Effetto di sollevamento */
+    box-shadow: 0 6px 12px rgba(0, 123, 255, 0.4); /* Ombra più forte al passaggio del mouse */
+}
+
+/* Quando il pulsante viene cliccato */
+.modern-btn:active {
+    background-color: #004085;    /* Colore ancora più scuro quando cliccato */
+    transform: translateY(0);     /* Ripristina la posizione originale */
+    box-shadow: 0 2px 4px rgba(0, 123, 255, 0.2); /* Ombra leggera al clic */
 }
