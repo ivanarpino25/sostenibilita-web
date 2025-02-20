@@ -1,47 +1,51 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sostenibilità Aziendale - Webuild</title>
+    <meta charset="UTF-8"> <!-- Definisce il set di caratteri per la pagina -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Rende la pagina responsiva su dispositivi mobili -->
+    <title>Sostenibilità Aziendale - Webuild</title> <!-- Titolo della pagina -->
+    <!-- Collegamento ai fogli di stile CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+    <!-- Navbar con collegamenti alle diverse sezioni -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <a class="navbar-brand" href="index.html">Webuild</a> <!-- Logo che rimanda alla homepage -->
         <div class="container">
-            <a class="navbar-brand" href="index.html">Sostenibilità Webuild</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+            <!-- Menu di navigazione mobile-friendly -->
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="report.html">Report ESG</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">Chi siamo</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contatti</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">Chi Siamo</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
+    <!-- Sezione Hero con titolo e descrizione -->
     <header class="hero text-center text-white">
         <div class="container">
-            <h1>Trasparenza e Sostenibilità</h1>
-            <p>Scopri i nostri report ESG e il nostro impegno per un futuro sostenibile.</p>
-            <a href="report.html" class="btn btn-primary">Consulta i report</a>
+            <h1>Trasparenza e Sostenibilità</h1> <!-- Titolo della sezione -->
+            <p>Esplora i nostri dettagliati report ESG e scopri come il nostro impegno verso la sostenibilità guida ogni aspetto delle nostre operazioni. Ci dedichiamo a un futuro più verde, equo e responsabile, mantenendo sempre la massima trasparenza nelle nostre azioni e nelle scelte strategiche.</p> <!-- Descrizione -->
+            <a href="report.html" class="btn btn-primary btn-lg mt-3 modern-btn">Consulta i report</a> <!-- Bottone per consultare i report -->
         </div>
     </header>
 
-    <section class="container my-5">
-        <h2>Il nostro impegno</h2>
-        <p>Webuild è impegnata nella sostenibilità ambientale, sociale e di governance. I nostri report ESG forniscono dati dettagliati e trasparenti per tutti gli stakeholder.</p>
+    <!-- Sezione sul nostro impegno -->
+    <section class="hero my-5">
+        <h2>Il nostro impegno</h2> <!-- Titolo della sezione -->
+        <p>Webuild è impegnata nella sostenibilità ambientale, sociale e di governance. I nostri report ESG forniscono dati dettagliati e trasparenti per tutti gli stakeholder.</p> <!-- Descrizione dell'impegno -->
     </section>
 
+    <!-- Footer con i diritti riservati -->
     <footer class="bg-dark text-white text-center p-3">
-        <p>&copy; 2024 Webuild - Tutti i diritti riservati</p>
+        <p>&copy; 2025 Webuild - Tutti i diritti riservati</p>
     </footer>
 
+    <!-- Inclusione degli script necessari per Bootstrap -->
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>
 </body>
